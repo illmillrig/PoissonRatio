@@ -29,7 +29,7 @@ MStatus PoissonRatio::initialize() {
     MStatus stat;
 	MFnNumericAttribute fnNum;
 
-    ratio = fnNum.create("ratio", "rat", MFnNumericData::kDouble, 0.0, &stat);
+    ratio = fnNum.create("ratio", "rat", MFnNumericData::kDouble, 0.5, &stat);
     CHECK_MSTATUS_AND_RETURN_IT(stat);
     fnNum.setKeyable(true);
     fnNum.setMin(-1.0);
@@ -37,13 +37,13 @@ MStatus PoissonRatio::initialize() {
     stat = PoissonRatio::addAttribute(ratio);
     CHECK_MSTATUS_AND_RETURN_IT(stat);
 
-    staticLength = fnNum.create("staticLength", "slen", MFnNumericData::kDouble, 0.0, &stat);
+    staticLength = fnNum.create("staticLength", "slen", MFnNumericData::kDouble, 1.0, &stat);
     CHECK_MSTATUS_AND_RETURN_IT(stat);
     fnNum.setKeyable(true);
     stat = PoissonRatio::addAttribute(staticLength);
     CHECK_MSTATUS_AND_RETURN_IT(stat);
 
-    dynamicLength = fnNum.create("dynamicLength", "dlen", MFnNumericData::kDouble, 0.0, &stat);
+    dynamicLength = fnNum.create("dynamicLength", "dlen", MFnNumericData::kDouble, 1.0, &stat);
     CHECK_MSTATUS_AND_RETURN_IT(stat);
     fnNum.setKeyable(true);
     stat = PoissonRatio::addAttribute(dynamicLength);
