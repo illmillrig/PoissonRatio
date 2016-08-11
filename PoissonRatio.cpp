@@ -21,10 +21,10 @@ void* PoissonRatio::creator() {
 }
 
 MStatus PoissonRatio::initialize() {
-	// attributes are writable by default
-	// attributes are storable by default
-	// attributes are readable by default
-	// attributes not keyable by default
+    // attributes are writable by default
+    // attributes are storable by default
+    // attributes are readable by default
+    // attributes not keyable by default
 
     MStatus stat;
     MFnNumericAttribute fnNum;
