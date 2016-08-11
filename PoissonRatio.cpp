@@ -27,7 +27,7 @@ MStatus PoissonRatio::initialize() {
 	// attributes not keyable by default
 
     MStatus stat;
-	MFnNumericAttribute fnNum;
+    MFnNumericAttribute fnNum;
 
     ratio = fnNum.create("ratio", "rat", MFnNumericData::kDouble, 0.5, &stat);
     CHECK_MSTATUS_AND_RETURN_IT(stat);
