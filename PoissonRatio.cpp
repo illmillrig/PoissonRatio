@@ -77,7 +77,7 @@ MStatus PoissonRatio::compute(const MPlug &plug, MDataBlock &data) {
     double strn = -(nu * ((dlen - slen) / slen));
 
     data.outputValue(PoissonRatio::strain).setDouble(strn);
-    data.setClean(PoissonRatio::strain);
+    data.setClean(plug);
 
     return MS::kSuccess;
 }
